@@ -230,4 +230,4 @@ class Pass_Main:
 			print("\n[-] Something Went Wrong, Exiting Program")
 			exit()
 
-print(Pass_Main().main_execution())
+Pass_Main().main_execution()
