@@ -8,6 +8,8 @@ import getpass
 import json
 import base64
 import time
+import platform
+
 #Class for encrypting and decrypting text
 class Crypto:
     def generate_key(self):
@@ -28,9 +30,9 @@ class Pass_Main:
 	def __init__(self):
 		self.key = b'-ZE7SwuXrh0sr_F3gVtkBTuFWFygfO4wylYCIGp3zyw='
 	def screen_clear(self):
-		try:
+		if platform.system() == "Linux":
 			os.system("clear")
-		except:
+		elif platform.system() == "Windows":
 			os.system("cls")
 
 	def greeting(self):
